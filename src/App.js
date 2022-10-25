@@ -3,7 +3,7 @@ import React, {useState} from "react";
 import { Switch, Route, Redirect, NavLink } from "react-router-dom";
 
 import { AppointmentsPage } from "./containers/appointmentsPage/AppointmentsPage";
-import { ContactsPage } from "./containers/contactsPage/ContactsPage";
+import  {ContactsPage}  from "./containers/contactsPage/ContactsPage";
 
 function App() {
   /*
@@ -41,15 +41,13 @@ function App() {
   
 
 const addContact = ({target}) =>{
-  const {name, value} = target; 
-  setContact((prevContact) =>({...prevContact, [name]: value}))
+  setContact(contact.push(target))
 
 
 }
 
 const addAppointment = ({target}) =>{
-  const {name, value} = target; 
-  setAppointment((prevAppointment) =>({...prevAppointment, [name]: value}))
+  setAppointment(appointment.push(target))
 }
 
 
