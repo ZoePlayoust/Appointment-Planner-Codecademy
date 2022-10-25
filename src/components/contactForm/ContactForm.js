@@ -10,6 +10,8 @@ export const ContactForm = ({
   handleSubmit
 }) => {
   return (
-    ContactForm
+    <form onSubmit={handleSubmit}>
+   <input></input>
+   </form>
   );
 };
