@@ -47,7 +47,6 @@ const addContact = ({target}) =>{
 
 }
 
-
 const addAppointment = ({target}) =>{
   const {name, value} = target; 
   setAppointment((prevAppointment) =>({...prevAppointment, [name]: value}))

@@ -9,9 +9,18 @@ export const ContactForm = ({
   setEmail,
   handleSubmit
 }) => {
+
+  const handleChange = ({ target }) =>{
+    const {name, value} = target; 
+    setName(name.target.value)
+  }
   return (
     <form onSubmit={handleSubmit}>
-   <input></input>
+   <input onChange={handleChange}type='text' value={name}></input>
+   <input onChange={handleChange}type='tel'value={phone}></input>
+   <input onChange={handleChange}type='email' value={email}></input>
+   <input onChange={handleChange}type='submit'></input>
+
    </form>
   );
 };
