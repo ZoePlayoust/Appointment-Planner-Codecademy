@@ -21,13 +21,7 @@ const addContact = (objectData) =>{
   
 }
 
-const handleChange = ({ target })=>{
-  const {name, phone, email} = target;
-  setName(name); 
-  setPhone(phone); 
-  setEmail(email)
 
-}
   const handleSubmit = (e) => {
     e.preventDefault();
     if (!duplicate){ addContact({name: name, phone: phone, email: email}) 
@@ -62,7 +56,7 @@ const handleChange = ({ target })=>{
     <div>
       <section>
         <h2>Add Contact</h2> 
-        <ContactForm name={name} phone={phone} email={email} duplicate={duplicate} handleSubmit={handleSubmit} handleChange={handleChange}/>
+        <ContactForm name={name} phone={phone} email={email} duplicate={duplicate} setName={setName} setEmail={setEmail} setPhone={setPhone} handleSubmit={handleSubmit} />
       </section>
       <hr />
       <section>
