@@ -51,7 +51,6 @@ const addContact = (objectData) =>{
   Using hooks, check for contact name in the 
   contacts array variable in props
   */
-
   return (
     <div>
       <section>
@@ -61,7 +60,7 @@ const addContact = (objectData) =>{
       <hr />
       <section>
         <h2>Contacts</h2>
-        <TileList contact={contact}/>
+        <TileList info={contact}/>
       </section>
     </div>
   );

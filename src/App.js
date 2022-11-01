@@ -40,14 +40,14 @@ function App() {
   */
   
 
-const addContact = ({target}) =>{
-  setContact(contact.push(target))
+const addContact = (target) =>{
+  setContact((prev)=>{return [target, ...prev]})
 
 
 }
 
-const addAppointment = ({target}) =>{
-  setAppointment(appointment.push(target))
+const addAppointment = (target) =>{
+  setAppointment((prev)=>{return [target, ...prev]})
 }
 
 
@@ -80,7 +80,8 @@ const addAppointment = ({target}) =>{
           <Route path={ROUTES.APPOINTMENTS}>
             {/* Add props to AppointmentsPage */}
             <AppointmentsPage addAppointment={addAppointment}
-                              appointment={appointment}/>
+                              appointment={appointment}
+                              contact={contact}/>
           </Route>
         </Switch>
       </main>

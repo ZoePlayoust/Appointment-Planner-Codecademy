@@ -1,16 +1,16 @@
 import React from "react";
 
-export const Tile = (prop) => {
-
-  const Tile = (prop)=>{
-    const preprop = prop.values()
-    const listTile = preprop.map((prop, index) => <p className='tile'key={index}>{prop}</p>)
-    return listTile
-      }
+export const Tile = ({contact}) => {
 
   return (
     <div className="tile-container">
-      <p className='tile-title'>{Tile(prop)}</p>
+     {Object.values(contact).map((value, i) => { 
+      return <p className={i === 0 ? 'tile-title' : 'tile'}>{value}</p>})
+      
+     }
+      
     </div>
   );
+
 };
+
